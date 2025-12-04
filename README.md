@@ -1,5 +1,4 @@
-# Allura-Store
-
+## Allura-Store
 Análisis Comparativo de Tiendas y Recomendación Estratégica
 Descripción del Proyecto
 Este proyecto tiene como objetivo analizar el rendimiento de cuatro tiendas de comercio electrónico (Tienda 1, Tienda 2, Tienda 3, Tienda 4) basándose en métricas clave de negocio. El análisis está diseñado para ayudar en la toma de decisiones estratégicas, específicamente para identificar si alguna tienda debería ser considerada para venta o reestructuración debido a un bajo rendimiento o ineficiencias operativas.
@@ -17,18 +16,46 @@ Productos Más y Menos Vendidos: Identificación del Top 5 de productos con mayo
 Costo Promedio de Envío: Cálculo del costo promedio asociado al envío de productos desde cada tienda.
 Hallazgos Clave
 Facturación: La Tienda 1 presenta la facturación total más alta, seguida de la Tienda 2, Tienda 3 y Tienda 4.
-Calificación de Clientes: La Tienda 3 tiene la calificación promedio más alta, mientras que la Tienda 1 registra la calificación más baja.
-Costos de Envío: La Tienda 1 incurre en el costo promedio de envío más alto, siendo la Tienda 4 la que tiene el costo más bajo.
-Categorías Populares: 'Muebles', 'Electrónicos' y 'Juguetes' son consistentemente las categorías más populares en la mayoría de las tiendas.
-Recomendación Estratégica
-Basándose en un análisis comparativo de todos los puntos clave, se recomienda la venta de la Tienda 1.
+Calificación de Clientes: La Tienda 3 tiene la calificación promedio más alta, mientras que la Tienda 1 posee la calificación más baja.
+Costo de Envío: La Tienda 1 registra el costo promedio de envío más alto, y la Tienda 4 el más bajo.
+Categorías Populares: "Muebles" y "Electrónicos" son consistentemente las categorías más vendidas en todas las tiendas.
+Recomendación Estratégica Principal
+Se recomienda la venta de la Tienda 1. A pesar de tener la facturación más alta, presenta la calificación promedio más baja y el costo promedio de envío más alto. Estos factores indican problemas significativos en la satisfacción del cliente y la eficiencia operativa, lo que podría afectar su rentabilidad y reputación a largo plazo. La venta permitiría redirigir recursos a tiendas con mejor desempeño.
 
-Justificación de la Recomendación:
-Aunque la Tienda 1 tiene la facturación más alta, la combinación de la calificación promedio más baja de los clientes y el costo promedio de envío más alto la identifica como la tienda con el mayor riesgo y el menor potencial de mejora a largo plazo sin una inversión sustancial y reestructuración. Una baja satisfacción del cliente y altos costos operativos erosionan la rentabilidad y pueden dañar la reputación general de la marca. En contraste, otras tiendas, como la Tienda 4, aunque con menor facturación, muestran una mayor eficiencia operativa y una mejor satisfacción del cliente, lo que las hace más atractivas para una futura inversión o crecimiento.
+Instalación
+Para ejecutar este proyecto, necesitas tener Python 3.x instalado. Se recomienda usar un entorno virtual para manejar las dependencias.
 
-Cómo Utilizar este Notebook
-Cargar Datos: Ejecuta las celdas de importación de datos para cargar los archivos CSV en DataFrames de pandas.
-Ejecutar Análisis: Recorre las secciones del notebook, ejecutando las celdas para visualizar los diferentes análisis (facturación, categorías, calificaciones, etc.).
-Revisar Conclusión: La sección final "Análisis y Recomendación Estratégica" consolida todos los hallazgos y presenta la recomendación final.
-Requisitos
-Este notebook utiliza las librerías pandas, matplotlib y seaborn.
+Clonar el repositorio (si aplica):
+
+git clone <URL_DEL_REPOSITORIO>
+cd Allura-Store
+Crear y activar un entorno virtual:
+
+python -m venv venv
+# En Windows:
+venv\Scripts\activate
+# En macOS/Linux:
+source venv/bin/activate
+Instalar las dependencias:
+
+pip install -r requirements.txt
+(Asegúrate de crear un archivo requirements.txt con las librerías necesarias, por ejemplo, pandas, matplotlib, seaborn).
+
+Dependencias
+Las principales librerías utilizadas en este proyecto son:
+
+pandas para manipulación y análisis de datos.
+matplotlib para la creación de gráficos estáticos.
+seaborn para la visualización de datos estadísticos.
+json para manejar la salida de resúmenes.
+Estas y otras dependencias se listan en el archivo requirements.txt.
+
+Cómo Ejecutar el Proyecto
+Asegúrate de haber completado los pasos de instalación.
+Abre el notebook de Jupyter (o Google Colab) analisis_tiendas.ipynb.
+Ejecuta todas las celdas del notebook en orden. Esto cargará los datos, realizará los análisis y generará las visualizaciones y el resumen estratégico.
+Posibles Problemas y Soluciones
+Archivos CSV no encontrados: Asegúrate de que los URLs de los archivos CSV (tienda_1.csv, tienda_2.csv, etc.) sean correctos y accesibles. Si los archivos están en una ubicación local, verifica la ruta.
+Errores de instalación de librerías: Si pip install -r requirements.txt falla, intenta instalar las librerías individualmente (ej. pip install pandas). Asegúrate de que tu entorno virtual esté activado.
+Problemas de visualización: Si los gráficos no se muestran correctamente, verifica que matplotlib y seaborn estén instalados y que estés ejecutando el código en un entorno que soporte la visualización (como Jupyter Notebook o Google Colab).
+Columnas faltantes: Si el código produce errores de "KeyError" por columnas no encontradas, verifica que los nombres de las columnas en tus archivos CSV coincidan con los usados en el script (Producto, Categoría del Producto, Precio, etc.).
